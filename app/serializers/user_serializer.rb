@@ -18,4 +18,6 @@
 class UserSerializer
   include JSONAPI::Serializer
   attributes :id, :email, :username
+
+  has_many :lounges
 end
