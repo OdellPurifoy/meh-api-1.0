@@ -32,6 +32,7 @@ gem "bootsnap", require: false
 
 gem 'devise'
 gem 'devise-jwt'
+gem 'faker', '~> 3.1', '>= 3.1.1'
 gem 'jsonapi-serializer'
 gem 'rubocop', require: false
 
