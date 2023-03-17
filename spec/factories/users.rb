@@ -15,9 +15,12 @@
 #  username               :string           not null
 #  jti                    :string           not null
 #
-class UserSerializer
-  include JSONAPI::Serializer
-  attributes :id, :email, :username
+require 'faker'
 
-  has_many :lounges
+FactoryBot.define do
+  factory :user do
+    email { Faker::Internet.email }
+    username { Faker::Internet.username }
+    password { Faker::Internet.password }
+  end
 end

@@ -32,6 +32,7 @@ gem "bootsnap", require: false
 
 gem 'devise'
 gem 'devise-jwt'
+gem 'faker', '~> 3.1', '>= 3.1.1'
 gem 'jsonapi-serializer'
 gem 'rubocop', require: false
 
@@ -44,9 +45,13 @@ gem "rack-cors"
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
+  gem 'shoulda-matchers', '~> 5.3'
 end
 
 group :development do
+  gem 'annotate'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
