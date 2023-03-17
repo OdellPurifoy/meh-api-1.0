@@ -14,4 +14,11 @@
 require 'rails_helper'
 
 RSpec.describe Lounge, type: :model do
+  describe 'Database columns' do
+    it { should have_db_column(:name).of_type(:string) }
+    it { should have_db_column(:phone).of_type(:string) }
+    it { should have_db_column(:email).of_type(:string) }
+    it { should have_db_column(:description).of_type(:text) }
+    it { should have_db_index([:user_id]) }
+  end
 end
