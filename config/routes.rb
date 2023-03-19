@@ -10,5 +10,5 @@ Rails.application.routes.draw do
                        sessions: 'users/sessions',
                        registrations: 'users/registrations'
                      }
-  resources :lounges
+  resources :lounges, only: :index
 end
